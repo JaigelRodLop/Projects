@@ -27,9 +27,17 @@ for c in cnts:
             cv2.putText(image,'Pentagono',(x,y-5),1,1,(0,255,0),1)
         case 6:
             cv2.putText(image,'Hexagono',(x,y-5),1,1,(0,255,0),1)
+        case 8:
+            cv2.putText(image,'Octagono',(x,y-5),1,1,(0,255,0),1)
+        case 10:
+            cv2.putText(image,'Estrella',(x,y-5),1,1,(0,255,0),1)
         case _:
-            cv2.putText(image,'Circulo',(x,y-5),1,1,(0,255,0),1)
-    
+            aspectRatio = float(w)/h
+            if aspectRatio > 0.95 and aspectRatio < 1.05:
+                cv2.putText(image,'Circulo',(x,y-5),1,1,(0,255,0),1)
+            else:
+                cv2.putText(image,'Ovalo',(x,y-5),1,1,(0,255,0),1)
+
     cv2.drawContours(image,[approx],0,(0,255,0),2)
     cv2.imshow('image',image)
     cv2.waitKey(0)
