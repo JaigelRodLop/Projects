@@ -1,5 +1,4 @@
 import cv2 # CV2: Biblioteca de Python especializada en imágenes
-import numpy as np
 
 image = cv2.imread('./Recursos/fignew.JPG') # Imagen a trabajar
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) # Escala de grises
