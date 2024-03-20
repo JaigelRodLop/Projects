@@ -31,10 +31,18 @@ for c in cnts: # Cuenta los vértices en cada contorno
             cv2.putText(image,'Pentagono',(x,y-5),1,1,(0,255,0),1)
         case 6:
             cv2.putText(image,'Hexagono',(x,y-5),1,1,(0,255,0),1)
+        case 7:
+            cv2.putText(image,'Heptagono',(x,y-5),1,1,(0,255,0),1)
         case 8:
             cv2.putText(image,'Octagono',(x,y-5),1,1,(0,255,0),1)
+        case 9:
+            cv2.putText(image,'Nonecagono',(x,y-5),1,1,(0,255,0),1)
         case 10:
-            cv2.putText(image,'Estrella',(x,y-5),1,1,(0,255,0),1)
+            aspectRatio = float(w)/h
+            if aspectRatio > 0.95 and aspectRatio < 1.05:
+                cv2.putText(image,'Estrella',(x,y-5),1,1,(0,255,0),1)
+            else:
+                cv2.putText(image,'Decagono',(x,y-5),1,1,(0,255,0),1)
         case _:
             aspectRatio = float(w)/h
             if aspectRatio > 0.95 and aspectRatio < 1.05:
