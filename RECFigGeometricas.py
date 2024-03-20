@@ -1,7 +1,7 @@
 import cv2 # CV2: Biblioteca de Python especializada en imágenes
 import numpy as np
 
-image = cv2.imread('./Recursos/figuras.JPG') # Imagen a trabajar
+image = cv2.imread('./Recursos/fignew.JPG') # Imagen a trabajar
 gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) # Escala de grises
 canny = cv2.Canny(gray,10,150) # Binarización y construcción de bordes
 canny = cv2.dilate(canny,None,iterations=1) # Esta función asegura los perímetros
